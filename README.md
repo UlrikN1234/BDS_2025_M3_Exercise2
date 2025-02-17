@@ -22,11 +22,14 @@ The goal of this project is to fine-tune a pre-trained transformer model for a t
 
 ## Dataset
 
-The AG News dataset is a collection of news articles classified into 4 categories:
-- World
-- Sports
-- Business
-- Science/Technology
+The AG's news topic classification dataset is constructed by choosing 4 largest classes from the original corpus. Each class contains 30,000 training samples and 1,900 testing samples. The total number of training samples is 120,000 and testing 7,600.
+
+The file classes.txt contains a list of classes corresponding to each label.
+
+The files train.csv and test.csv contain all the training samples as comma-sparated values. There are 3 columns in them, corresponding to class index (1 to 4), title and description. The title and description are escaped using double quotes ("), and any internal double quote is escaped by 2 double quotes (""). New lines are escaped by a backslash followed with an "n" character, that is "\n".
+
+The labels are:
+1: World 2: Sports 3: Business 4: Sci/Tech
 
 The dataset is available from [Hugging Face Datasets](https://huggingface.co/datasets/ag_news).
 
